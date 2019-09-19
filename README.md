@@ -1,6 +1,8 @@
 # Buspreise
 Buspreise is a python library to check the prices from long-distance bus in germany and parts of the eu. 
 
+**This script scrapes the site fernbusse.de. Please aks the owners for permissions to scrape!**
+
 ## Installation
 1. Download the `includes/buspreise.py`
 2. Import it into your project (for example put it in a includes folder like i did and import via `from includes import buspreise`
