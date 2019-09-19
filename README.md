@@ -7,10 +7,11 @@ Buspreise is a python library to check the prices from long-distance bus in germ
 3. Thats it, have fun
 
 ## Functions
-Your input is always a start and end (start, destination) city and a date (only the day will be used, no time, please provide a datetime object). 
+Your input is always a start and end (start, destination) city and a date (please provide a datetime object). 
 
 `getLowestPrice` returns the cheapest connection for the given day. 
 `getHighestPrice` returns the most expensive connection for the given day.
+`getNextPrice` returns the next available connection.
 
 Return Object is a Dict with
 `['price']` price in Euro as a float
@@ -18,6 +19,13 @@ Return Object is a Dict with
 `['departure']` time of departure in format `HH:MM` (24hrs)
 `['provider']` simple string with the name from the provider
 
+If there is no connection or anything went wrong `['duration']`, `['provider']` are set to `False`
+
 ## Ressources used
 
 This library just scrapes fernbusse.de and parses the site. So be aware, do not make illegal stuff, do not spam the site with requests.
+
+## Known Issues
+**Data not correct**
+
+That might happen. This tool parses a website, there are many things that can go wrong. 
